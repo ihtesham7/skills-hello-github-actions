@@ -1,9 +1,8 @@
 name: Post welcome comment
 run-name: Deploy to ${{ github.ref_name }} by @${{ github.actor }}
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    types: [opened]
 permissions:
   pull-requests: write
 jobs:
